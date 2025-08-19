@@ -6,8 +6,8 @@ on :
   schedule :
     - cron : '*/1 * * * *'
 
-  pull_request :
-    types : [closed, assigned, opened, reopened] 
+  # pull_request :
+  #   types : [closed, assigned, opened, reopened] 
 
 jobs :
   run-github-actions :
