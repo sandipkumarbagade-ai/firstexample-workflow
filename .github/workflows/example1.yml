@@ -1,46 +1,20 @@
-name: shell commands
+name : shell commands
+
 on: [push]
 
 jobs:
-run-shell-commands:
-  runs-on: ubuntu-latest
-  steps:
-    - name: string
-      run: echo "Hello, World!"
-
-    - name: multiline scripts 
-      run: |
-        node -v 
-        npm -v
-        echo "This is a multiline script example."
-
-    - name : python command
-      run : |
-          import platform 
-          print("Python version:", platform.python_version())
-          print("Platform:", platform.system(), platform.release())
-          print("platform processor" , platform.processor())        
-      shell : python
-
-  run-window-command:
-    runs-on: windows-latest
+  run-shell-commands:
+    runs-on: ubuntu-latest
     steps:
-      - name: Director powershell
-        run: Get-Location
-
-      - name: Director Bash
-        run: pwd
-        shell: bash
-
       - name: string
-        run: echo "Hello, World! run on windows"
+        run: echo "Hello, World! - Tavant Bangalore India "
 
-      - name: multiline scripts
+      - name: multiline script
         run: |
           node -v 
-          npm -v
-          each "this is multiline script example"
-
+          npm -v 
+          echo "This is a multiline script"
+      
       - name : python command
         run : |
           import platform 
@@ -48,3 +22,32 @@ run-shell-commands:
           print("Platform:", platform.system(), platform.release())
           print("platform processor" , platform.processor())
         shell : python
+ 
+  run-windows-command :
+    runs-on: windows-latest
+    steps:
+      - name : Director powershell
+        run : Get-Location
+
+      - name : Directort Bash
+        run : pwd
+        shell : bash
+
+      - name: string
+        run: echo "Hello, World! - Tavant India "
+
+      - name: multiline script
+        run: |
+          node -v 
+          npm -v 
+          echo "This is a multiline script"
+      
+      - name : python command
+        run : |
+          import platform 
+          print("Python version:", platform.python_version())
+          print("Platform:", platform.system(), platform.release())
+          print("platform processor" , platform.processor())
+        shell : python
+
+
