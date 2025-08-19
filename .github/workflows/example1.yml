@@ -11,8 +11,8 @@ run-shell-commands:
 
     - name: multiline scripts 
       run: |
-      node -v 
-      npm -v
+         node -v 
+         npm -v
       echo "This is a multiline script example."
 
     - name : python command
